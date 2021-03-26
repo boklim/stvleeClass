@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="board">
+
+	<insert id="insertBoardList" parameterType="com.lbk.study.dto.BoardDto">
+		INSERT INTO lbk_board 
+			(writer, title, contents, createTime, sessionId) 
+		VALUES
+			(#{writer}, #{title}, #{contents}, now(), #{sessionId})
+	</insert>
+	
+	<select id="selectBoardList" resultType="com.lbk.study.dto.BoardDto">
+		SELECT * FROM lbk_board;
+	</select>
+</mapper>

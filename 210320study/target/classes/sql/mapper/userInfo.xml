@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="userInfoMapper">
+	
+	<insert id="insertUserInfo" parameterType="com.lbk.study.dto.UserDto">
+		INSERT INTO userinfo (id, pw, name, birthday) VALUES(#{id}, #{pw}, #{name}, #{birthday})
+	</insert>
+	
+	<select id="getUserInfo" resultType="com.lbk.study.dto.UserDto">
+		SELECT * FROM userinfo WHERE id = #{id}
+	</select>
+</mapper>
