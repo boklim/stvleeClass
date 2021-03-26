@@ -18,11 +18,15 @@
 table, td, tr, th {border:1px solid black;}
 table, div {width:100%;}
 button {width:100px; height:30px; background-color:pink; float:right; }
+.boardNum {text-align:center;}
+#info {font-size:0.6em;}
 </style>
 <body>
-기존 세션 값 : <%=session.getId() %> <br>
-세션 아이디 값 : <%=session.getAttribute("loginSession") %> <br>
-세션 결과 : <%=session.getAttribute("result") %> <br>
+	<div id="info">
+	기존 세션 값 : <%=session.getId() %> <br>
+	세션 아이디 값 : <%=session.getAttribute("loginSession") %> <br>
+	세션 결과 : <%=session.getAttribute("result") %> <br>
+	</div>
 
 	<div>
 		<c:if test="${not empty sessionScope.result}">
@@ -31,7 +35,7 @@ button {width:100px; height:30px; background-color:pink; float:right; }
 	</div>	
 	<table>
 		<tr>
-			<th>게시글번호</th>
+			<th>게시글 번호</th>
 			<th>제목</th>
 			<th>작성자</th>
 			<th>등록시간</th>

@@ -26,23 +26,20 @@
 <title>loginMain.jsp</title>
 </head>
 <body>
-
-<table>
-	<tr>
-		<td>아이디</td>
-		<td><input id="id" type="text"></td>
-	</tr>	
-	<tr>
-		<td>패스워드</td>
-		<td><input id="pw" type="password"></td>
-	</tr>
-	<tr>
-		<td><button id="join" type="button">회원가입</button></td>
-		<td><button type="button" onclick="fn_loginAction()">로그인</button></td>
-	</tr>	
-
-
-</table>
+	<table style="margin:100px auto; border:solid 1px gray; padding:40px;">
+		<tr>
+			<td>아이디</td>
+			<td><input id="id" type="text"></td>
+		</tr>	
+		<tr>
+			<td>패스워드</td>
+			<td><input id="pw" type="password"></td>
+		</tr>
+		<tr>
+			<td><button id="join" type="button">회원가입</button></td>
+			<td><button type="button" onclick="fn_loginAction()">로그인</button></td>
+		</tr>	
+	</table>
 <script>
 function fn_loginAction() {
 	var param = {

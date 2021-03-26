@@ -21,14 +21,19 @@
 table, td, tr, th {border:1px solid black;}
 table {width:100%;}
 th {width:30%;}
+#info {font-size:0.6em;}
+.btn {width:100px; display:inline-block;}
 </style>
 <body>
-기존 세션 값 : <%=session.getId() %>
-세션 아이디 값 : <%=session.getAttribute("loginSession") %>
+	<div id="info">
+	기존 세션 값 : <%=session.getId() %><br>
+	세션 아이디 값 : <%=session.getAttribute("loginSession") %><br>
+	세션 결과 : <%=session.getAttribute("result") %> <br>
+	</div>
 <%  
 	if(session.getAttribute("loginSession") == null) {
 		//alert("해당 페이지의 접근 권한이 없습니다. 로그인 페이지로 이동합니다.");
-		response.sendRedirect("loginMain.jsp");
+		response.sendRedirect("../loginMain.jsp");
 	}
 %>
 	<table>
@@ -41,9 +46,9 @@ th {width:30%;}
 			<td><textarea id="content" style="width:98%; height:100%; text-align:center;"></textarea></td>
 		</tr>
 		<tr>
-			<td>
-				<input type="button" value="취소" onclick="cancel()">
-				<input type="button" value="등록" onclick="submit()">
+			<td colspan="2" style="height:40px; margin:0 auto;">
+				<input class="btn" type="button" value="취소" onclick="cancel()">
+				<input class="btn" type="button" value="등록" onclick="submit()">
 			</td>
 		</tr>
 	</table>
