@@ -33,7 +33,7 @@ th {width:30%;}
 <%  
 	if(session.getAttribute("loginSession") == null) {
 		//alert("해당 페이지의 접근 권한이 없습니다. 로그인 페이지로 이동합니다.");
-		response.sendRedirect("../loginMain.jsp");
+		response.sendRedirect("../loginMain");
 	}
 %>
 	<table>
